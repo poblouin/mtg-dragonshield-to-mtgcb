@@ -14,10 +14,10 @@ output_csv = input_csv.each_with_object([OUTPUT_HEADERS]) do |row, memo|
   count = row.fetch(:quantity)
   tradelist_count = 0
   name = row.fetch(:card_name).include?(',') ? "\"#{row.fetch(:card_name)}\"" : row.fetch(:card_name)
-  edition = 'Dominaria United'
+  edition = 'Dominaria United' # TODO
   card_number = row.fetch(:card_number)
-  condition = 'Near Mint'
-  language = 'English'
+  condition = 'Near Mint' # TODO
+  language = 'English' # TODO
   foil = row.fetch(:printing) == 'Foil' ? 'foil' : nil
 
   memo << [count, tradelist_count, name, edition, card_number, condition, language, foil]
